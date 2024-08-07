@@ -6,42 +6,60 @@
     <title>Document</title>
     <link rel="stylesheet" href="./tailwind_preflight.css" />
     <link rel="stylesheet" href="./index.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <form action="">
       <h1>Contact Us</h1>
-      <label for="first_name">
-        <span> First Name </span>
-        <input type="text" name="first_name" id="first_name" autocomplete="given-name" required />
-      </label>
-      <label for="last_name">
-        <span> Last Name </span>
-        <input type="text" name="last_name" id="last_name" autocomplete="family-name" required />
-      </label>
+      <div class="horizontal-section">
+        <label for="first_name">
+          <span> First Name </span>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            autocomplete="given-name"
+            required />
+        </label>
+        <label for="last_name">
+          <span> Last Name </span>
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            autocomplete="family-name"
+            required />
+        </label>
+      </div>
       <label for="email">
         <span> Email Address </span>
-        <input type="text" id="email" name="email" autocomplete="email" required />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required />
       </label>
       <fieldset>
         <legend>Query Type</legend>
-        <label>
-          <input
-            type="radio"
-            required
-            name="query_type"
-            value="General Enquiry"
-          />
-          General Enquiry
-        </label>
-        <label>
-          <input
-            type="radio"
-            required
-            name="query_type"
-            value="Support Request"
-          />
-          Support Request
-        </label>
+        <div class="horizontal-section">
+          <label>
+            <input
+              type="radio"
+              required
+              name="query_type"
+              value="General Enquiry" />
+            General Enquiry
+          </label>
+          <label>
+            <input
+              type="radio"
+              required
+              name="query_type"
+              value="Support Request" />
+            Support Request
+          </label>
+        </div>
       </fieldset>
       <label for="message_area">
         <span> Message </span>
@@ -52,11 +70,27 @@
           type="checkbox"
           name="consent_contact"
           id="consent_contact"
-          required="required"
-        />
+          required="required" />
         <span>I consent to being contacted by the team</span>
       </label>
       <button type="submit">Submit</button>
+      <article id="toast">
+        <h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: ">
+            <path
+              d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
+            <path
+              d="M9.999 13.587 7.7 11.292l-1.412 1.416 3.713 3.705 6.706-6.706-1.414-1.414z"></path>
+          </svg>
+          Message sent!
+        </h1>
+        <h2>Thanks for completing the form. We'll be in touch soon!</h2>
+      </article>
     </form>
   </body>
 </html>
