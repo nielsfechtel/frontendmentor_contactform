@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=a, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./tailwind_preflight.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <form action="">
+      <h1>Contact Us</h1>
+      <label for="first_name">
+        <span> First Name </span>
+        <input type="text" name="first_name" id="first_name" autocomplete="given-name" required />
+      </label>
+      <label for="last_name">
+        <span> Last Name </span>
+        <input type="text" name="last_name" id="last_name" autocomplete="family-name" required />
+      </label>
+      <label for="email">
+        <span> Email Address </span>
+        <input type="text" id="email" name="email" autocomplete="email" required />
+      </label>
+      <fieldset>
+        <legend>Query Type</legend>
+        <label>
+          <input
+            type="radio"
+            required
+            name="query_type"
+            value="General Enquiry"
+          />
+          General Enquiry
+        </label>
+        <label>
+          <input
+            type="radio"
+            required
+            name="query_type"
+            value="Support Request"
+          />
+          Support Request
+        </label>
+      </fieldset>
+      <label for="message_area">
+        <span> Message </span>
+        <textarea required id="message_area" name=""></textarea>
+      </label>
+      <label for="consent_contact">
+        <input
+          type="checkbox"
+          name="consent_contact"
+          id="consent_contact"
+          required="required"
+        />
+        <span>I consent to being contacted by the team</span>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
